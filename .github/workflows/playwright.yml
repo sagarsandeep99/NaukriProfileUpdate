@@ -1,6 +1,8 @@
 name: Naukri Profile Update
 
 on:
+  push:
+    branches: [ main, master ]
   schedule:
     # Runs every day at 9 AM IST (3:30 AM UTC)
     - cron: '0 2 * * *'   # 7:30 AM IST
