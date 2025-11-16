@@ -3,7 +3,19 @@ name: Naukri Profile Update
 on:
   schedule:
     # Runs every day at 9 AM IST (3:30 AM UTC)
-    - cron: '30 3 * * *'
+    - cron: '0 2 * * *'   # 7:30 AM IST
+    - cron: '15 2 * * *'  # 7:45 AM IST
+    - cron: '30 2 * * *'  # 8:00 AM IST
+    - cron: '0 3 * * *'   # 8:30 AM IST
+    - cron: '30 3 * * *'  # 9:00 AM IST
+    - cron: '0 4 * * *'   # 9:30 AM IST
+    - cron: '30 4 * * *'  # 10:00 AM IST
+    - cron: '0 5 * * *'   # 10:30 AM IST
+    - cron: '30 5 * * *'  # 11:00 AM IST
+    - cron: '0 8 * * *'   # 1:30 PM IST
+    - cron: '30 8 * * *'  # 2:00 PM IST
+    - cron: '0 9 * * *'   # 2:30 PM IST
+    - cron: '30 9 * * *'  # 3:00 PM IST
   
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
 
@@ -30,7 +42,7 @@ jobs:
         env:
           SRISHTI_NAUKRI_EMAIL: ${{ secrets.SRISHTI_NAUKRI_EMAIL }}
           SRISHTI_NAUKRI_PASSWORD: ${{ secrets.SRISHTI_NAUKRI_PASSWORD }}
-        run: npm run srishti
+        run: npm run srishti:headless
 
       - name: Upload test results
         if: always()

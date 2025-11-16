@@ -5,7 +5,7 @@
   "scripts": {
     "srishti:headless": "npx playwright test srishtiNaukriUpdate.spec.js --project=chromium",
     "srishti": "npx playwright test srishtiNaukriUpdate.spec.js --headed --project=chromium",
-    "srishti:debug": "npx playwright test srishtiNaukriUpdate.spec.js --debug --project=chromium",
+    "srishti:headless:debug": "npx playwright test srishtiNaukriUpdate.spec.js --project=chromium --trace on --video on",
     "vishala:headless": "npx playwright test vishalaNaukriUpdate.spec.js --project=chromium",
     "vishala": "npx playwright test vishalaNaukriUpdate.spec.js --headed --project=chromium",
     "vishala:debug": "npx playwright test vishalaNaukriUpdate.spec.js --debug --project=chromium",
