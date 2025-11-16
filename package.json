@@ -1,0 +1,21 @@
+{
+  "name": "Naukri Profile Update",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "srishti:headless": "npx playwright test srishtiNaukriUpdate.spec.js --project=chromium",
+    "srishti": "npx playwright test srishtiNaukriUpdate.spec.js --headed --project=chromium",
+    "srishti:debug": "npx playwright test srishtiNaukriUpdate.spec.js --debug --project=chromium",
+    "vishala:headless": "npx playwright test vishalaNaukriUpdate.spec.js --project=chromium",
+    "vishala": "npx playwright test vishalaNaukriUpdate.spec.js --headed --project=chromium",
+    "vishala:debug": "npx playwright test vishalaNaukriUpdate.spec.js --debug --project=chromium",
+    "report": "npx playwright show-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  }
+}
