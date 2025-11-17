@@ -34,6 +34,15 @@ jobs:
         with:
           node-version: '20'
 
+      # Cache cookies between runs to avoid repeated logins
+      - name: Cache authentication cookies
+        uses: actions/cache@v4
+        with:
+          path: auth-cookies.json
+          key: naukri-cookies-${{ github.run_id }}
+          restore-keys: |
+            naukri-cookies-
+
       - name: Install dependencies
         run: npm ci
 
