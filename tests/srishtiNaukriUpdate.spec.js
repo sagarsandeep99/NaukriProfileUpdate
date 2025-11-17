@@ -244,7 +244,7 @@ test.describe('Naukri Job Update', () => {
       timeout: 15000 
     });
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
       console.log(`Starting iteration ${i + 1}`);
       
       // Random delay before action to mimic human behavior
