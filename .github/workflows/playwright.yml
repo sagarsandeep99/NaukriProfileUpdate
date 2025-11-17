@@ -53,7 +53,7 @@ jobs:
         env:
           SRISHTI_NAUKRI_EMAIL: ${{ secrets.SRISHTI_NAUKRI_EMAIL }}
           SRISHTI_NAUKRI_PASSWORD: ${{ secrets.SRISHTI_NAUKRI_PASSWORD }}
-        run: npm run srishti:headless
+        run: xvfb-run npm run srishti:headless
 
       - name: Upload test results
         if: always()
