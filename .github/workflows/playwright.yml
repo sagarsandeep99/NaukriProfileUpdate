@@ -40,11 +40,11 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run Srishti Naukri Update with xvfb
+      - name: Run Srishti Naukri Update
         env:
           SRISHTI_NAUKRI_EMAIL: ${{ secrets.SRISHTI_NAUKRI_EMAIL }}
           SRISHTI_NAUKRI_PASSWORD: ${{ secrets.SRISHTI_NAUKRI_PASSWORD }}
-        run: xvfb-run npm run srishti
+        run: npm run srishti:headless
 
       - name: Upload test results
         if: always()
