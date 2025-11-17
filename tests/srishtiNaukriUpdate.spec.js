@@ -127,7 +127,7 @@ test.describe('Naukri Job Update', () => {
       timeout: 15000 
     });
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 10; i++) {
       console.log(`Starting iteration ${i + 1}`);
       
       // Click edit icon
